@@ -1,0 +1,14 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "eslint.options": {},
+  "jest.autoRun": {
+    "watch": true,
+    "onSave": "test-src-file",
+    "onStartup": [
+      "all-tests"
+    ]
+  },
+}

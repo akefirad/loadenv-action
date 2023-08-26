@@ -1,19 +1,38 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'loadenv-action'
+description: 'GitHub Action for loading environment variables'
+author: 'Rad Akefirad'
 
-# Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  files:
     required: true
-    default: '1000'
+    description: '.env files (default is ".env"), currently only one file is supported'
+    default: '.env'
 
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+  export-vars:
+    required: true
+    description: 'whether to export variables in the loaded file as environment variables'
+    default: "true"
+
+  expand-vars:
+    required: true
+    description: 'whether to exapnd variables in the loaded file'
+    default: "true"
+
+  ignore-host-env:
+    required: true
+    description: 'whether to ignore host runner environment variables while expanding variables'
+    default: "true"
+
+  additional-vars:
+    required: true
+    description: 'additional variables (JSON object) to be used while expanding variables'
+    default: '{}'
+
+  strict:
+    required: true
+    description: 'whether to throw an error if a variable is not found while expanding variables'
+    default: "true"
 
 runs:
-  using: node16
-  main: dist/index.js
+  using: 'node16'
+  main: 'dist/index.js'
