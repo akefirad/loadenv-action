@@ -40,3 +40,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TYPESCRIPT_DEFAULT_STYLE: prettier
           VALIDATE_JSCPD: false
+          FILTER_REGEX_EXCLUDE: ".*dist/.*.js" # why the ignorePattern in eslintrc.yml doesn't work?
