@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -33,7 +33,7 @@ jobs:
       ACTIONS_STEP_DEBUG: true
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./
         id: env
         with:
@@ -61,7 +61,7 @@ jobs:
   test-export:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./
         id: env
         with:
@@ -85,7 +85,7 @@ jobs:
   test-expand-without-host-env:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./
         id: env
         with:
@@ -110,7 +110,7 @@ jobs:
   test-expand-with-host-env:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./
         id: env
         with:
@@ -135,7 +135,7 @@ jobs:
   test-additional-vars:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./
         id: env
         with:
