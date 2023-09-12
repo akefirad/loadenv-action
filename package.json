@@ -20,7 +20,7 @@
     "check:workspace": "test -z \"$(git status --porcelain)\""
   },
   "dependencies": {
-    "@actions/core": "^1.0.0",
+    "@actions/core": "^1.10.1",
     "dotenv": "^16.0.0",
     "dotenv-expand": "^10.0.0",
     "husky": "^8.0.0",
