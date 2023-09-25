@@ -29,7 +29,7 @@
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/jest": "^29.0.0",
-    "@types/node": "^16.0.0",
+    "@types/node": "^16.18.54",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vercel/ncc": "^0.38.0",
