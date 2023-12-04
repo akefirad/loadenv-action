@@ -18,10 +18,10 @@ jobs:
         name: Loads `./path/to/.env`, expands, checks, and export variables
         with:
           files: ./path/to/.env
-          strict: true # default true
+          strict: true      # default true
           expand-vars: true # default true
           export-vars: true # default true
-          additional-vars: "${{ toJSON(vars) }}" # to make them avialbe while expanding!!!
+          additional-vars: "${{ toJSON(vars) }}" # to make them available while expanding!!!
       - name: Use output variables
         run: echo  ${{ steps.loadenv.FOO }} ${{ steps.loadenv.BAR }}
       - name: Use exported variables
