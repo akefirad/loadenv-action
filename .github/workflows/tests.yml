@@ -48,14 +48,17 @@ jobs:
       - name: BAR is nither exported nor expanded
         run: |
           [[ -z $BAR ]]
+          # shellcheck disable=SC2016
           [[ '${{ steps.env.outputs.BAR }}' == '$FOO' ]]
       - name: BAZ is nither exported nor expanded
         run: |
           [[ -z $BAZ ]]
+          # shellcheck disable=SC2016
           [[ '${{ steps.env.outputs.BAZ }}' == '$USER' ]]
       - name: QUX is nither exported nor expanded
         run: |
           [[ -z $QUX ]]
+          # shellcheck disable=SC2016
           [[ '${{ steps.env.outputs.QUX }}' == '$EXTERNAL_QUX' ]]
 
   test-export:
@@ -74,12 +77,15 @@ jobs:
           [[ "$FOO" == "foo" ]]
       - name: BAR is exported, but not expanded
         run: |
+          # shellcheck disable=SC2016
           [[ "$BAR" == '$FOO' ]]
       - name: BAZ is exported, but not expanded
         run: |
+          # shellcheck disable=SC2016
           [[ "$BAZ" == '$USER' ]]
       - name: QUX is exported, but not expanded
         run: |
+          # shellcheck disable=SC2016
           [[ "$QUX" == '$EXTERNAL_QUX' ]]
 
   test-expand-without-host-env:

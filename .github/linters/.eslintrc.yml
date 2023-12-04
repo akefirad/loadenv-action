@@ -12,6 +12,10 @@ ignorePatterns:
   - "**/node_modules/.*"
   - "**/dist/.*"
   - "**/coverage/.*"
+  - "**/settings.json"
+  - "**/tsconfig.json"
+  - "**/package.json"
+  - "**/package-lock.json"
 
 parser: "@typescript-eslint/parser"
 
@@ -20,7 +24,6 @@ parserOptions:
   sourceType: module
   project:
     - "./.github/linters/tsconfig.json"
-    - "./tsconfig.json"
 
 plugins:
   - jest

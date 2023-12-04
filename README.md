@@ -28,7 +28,7 @@ jobs:
         run: echo $FOO $BAR
 ```
 
-See [tests.yml](.github/workflows/tests.yml) file for different ways of using the action.
+See [tests.yml](.github/workflows/tests.yml) file for more examples.
 
 ## API
 

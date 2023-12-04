@@ -40,4 +40,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TYPESCRIPT_DEFAULT_STYLE: prettier
           VALIDATE_JSCPD: false
-          FILTER_REGEX_EXCLUDE: ".*dist/.*.js" # why the ignorePattern in eslintrc.yml doesn't work?
+          # Why the ignorePattern in eslintrc.yml doesn't work?
+          FILTER_REGEX_EXCLUDE: "(.github/workflows/tests.yml)|(.*dist/.*.js)"
+          # https://github.com/super-linter/super-linter/issues/4023
+          # And becuase of this issue, we have to exclude tests.yml above!
+          # GITHUB_ACTIONS_COMMAND_ARGS: >-
+          #   -ignore 'property "foo" is not defined in object type'
+          #   -ignore 'property "bar" is not defined in object type'
+          #   -ignore 'property "baz" is not defined in object type'
+          #   -ignore 'property "qux" is not defined in object type'
