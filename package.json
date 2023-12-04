@@ -1,7 +1,7 @@
 {
   "name": "loadenv-action",
   "description": "GitHub Action loading environment variables",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Rad Akefirad",
   "license": "MIT",
   "private": false,
