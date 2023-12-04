@@ -1,6 +1,7 @@
 # LoadEnv GitHub Action
 
 ## Examples
+
 ```yaml
 jobs:
   simple:
@@ -17,16 +18,18 @@ jobs:
         name: Loads `./path/to/.env`, expands, checks, and export variables
         with:
           files: ./path/to/.env
-          strict: true        # default true
-          expand-vars: true   # default true
-          export-vars: true   # default true
-          additional-vars: '${{ toJSON(vars) }}' # to make them avialbe while expanding!!!
+          strict: true      # default true
+          expand-vars: true # default true
+          export-vars: true # default true
+          additional-vars: "${{ toJSON(vars) }}" # to make them available while expanding!!!
       - name: Use output variables
         run: echo  ${{ steps.loadenv.FOO }} ${{ steps.loadenv.BAR }}
       - name: Use exported variables
         run: echo $FOO $BAR
 ```
-See [tests.yml](.github/workflows/tests.yml) file for different ways of using the action.
+
+See [tests.yml](.github/workflows/tests.yml) file for more examples.
 
 ## API
+
 See [action.yml](action.yml) file for full API.
